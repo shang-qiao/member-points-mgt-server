@@ -6,7 +6,7 @@ const db = mysql.createPool({
   host: "127.0.0.1",
   user: "root",
   password: "root",
-  database: "test",
+  database: "points_mgt",
 });
 
 // 向外共享 db 数据库连接对象
