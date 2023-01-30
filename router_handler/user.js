@@ -33,3 +33,26 @@ exports.login = async (req, res) => {
     res.json(resData(false, 610, "username or password is incorrect!"));
   }
 };
+
+exports.getRuleSetting = (req, res) => {
+  const rulesSetting = {
+    isEnabled: 2,
+    enableHours: 1,
+    isExpire: 2,
+    expireDays: 2,
+    isRemind: 2,
+    pointsRules: {
+      standardMoney: 3,
+      paidMondy: 4,
+      getPoints: 5,
+      maxPoints: 6,
+    },
+    isDeduction: 2,
+  };
+  res.json({
+    result: true,
+    code: 200,
+    data: rulesSetting,
+    msg: "success!",
+  });
+};
